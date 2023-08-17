@@ -1,0 +1,58 @@
+<!doctype html>
+<!--
+ Copyright 2021 Google LLC
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<html>
+<head>
+  <title>energy justice chatbattlebots</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <h1>Energy Justice Chatbot Comparison</h1>
+
+  <img src="{{ url_for('static', filename='images/bajablast.gif') }}" alt="baja blast" ></br> <!-- style="width:500px;height:500px;"> -->
+  
+  <h2>Submit your question and compare the results from each team's bot</h2>
+  <table>
+	<tr>
+	  <td colspan="2">
+		<textarea id="bot_query" name="bot_query" rows="4" cols="50" placeholder="Type question here..."></textarea><br><br></td>
+	</tr>
+	<tr>
+		<td colspan="2"><a href=# id=test><button class='btn btn-default'>Test</button></a></td>
+	  </tr>
+	<tr>
+		<td colspan="2" id="status"></td>
+	  </tr>
+	<tr>
+	  <th width="50%">Group A</th>
+	  <th width="50%">Group B</th>
+	</tr>
+	<tr>
+		<td class="result" id="group_a_time"></td>
+		<td class="result" id="group_b_time"></td>
+	  </tr>
+	<tr>
+	  <td class="result" id="group_a"></td>
+	  <td class="result" id="group_b"></td>
+	</tr>
+  </table>
+
+</body>
+</html>
